@@ -27,3 +27,6 @@ jobs:
 
       - name: Scan Python code for security issues
         run: bandit -r app.py test_app.py
+
+      - name: Build Docker image
+        run: docker build -t devops-python-app .
