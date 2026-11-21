@@ -9,6 +9,6 @@ class WebApp(BaseHTTPRequestHandler):
         self.wfile.write(b"<h1>Welcome to my DevOps CI/CD Pipeline!</h1>")
 
 if __name__ == "__main__":
-    server = HTTPServer(("0.0.0.0", 8000), WebApp)
+    server = HTTPServer(("127.0.0.1", 8000), WebApp)
     print("Web application running on port 8000")
     server.serve_forever()
